@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atividade 13</title>
+
+    <script>
+
+        function mostrar() {
+            var txt = window.document.forms.frase.elements[0].value;
+            
+            var x = document.getElementsByName("check");
+
+
+            if (x[0].checked == true) {
+                txt = txt.toUpperCase();
+                alert(txt);
+            }
+
+            if (x[1].checked == true) {
+                txt = txt.toLowerCase();
+                alert(txt);
+            }
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <form action="teste" name="frase" id="frase">
+
+        <div id="conteudo">
+            Frase:
+            <input name="idFrase" type="text" id="idFrase">
+
+            <input name="Submit" type="submit" form="frase" value="Submit">
+
+        </div>
+
+        Maiúsculo: <input type="checkbox" name="check" onclick=mostrar();>
+        Minúsculo: <input type="checkbox" name="check" onclick=mostar();>
+
+    </form>
+</body>
+
+</html>
